@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel="stylesheet" href="../css/form.css">
 </head>
+
 <body>
-    
+  <nav class="nav">
+    <span class="heading">Workshop Registration </span> <button class="more-action">More Actions</button>
+  </nav>
+  <div class="register"> Register Now, Form is available</div>
+  <form action="#" method="get" class="form-example">
+    <div class="body-footer">
+      <div class="big-container">
+        <div class="side1">
+          <ul class="flex-outer">
+            <li>
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" placeholder="Enter your first name here" required>
+            </li>
+            <li>
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" placeholder="Enter your last name here" required>
+            </li>
+            <li>
+              <label for="companay">Company/Institution</label>
+              <input type="text"  id="companay" placeholder="Company Name" required>
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter your email here"required>
+            </li>
+            <li>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" placeholder="Enter your phone here"required>
+            </li>
+            <li>
+              <label for="address">address</label>
+              <textarea rows="6" id="address" placeholder="Enter your address here"required></textarea>
+            </li>
+            <li>
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="city name" required>
+            </li>
+            <li>
+              <label for="country">Country</label>
+              <select name="counry" id="country">
+                <option value="country">Neoa</option>
+                <option value="country">NIP</option>
+                <option value="country">Varati</option>
+                <option value="country">Acascsc</option>
+                <option value="country">Bahahaha</option>
+                <option value="country">BUHAHAHA</option>
+              </select>
+            </li>
+            </ul>
+        </div>
+        <fieldset class="side2">
+          <ul class="flex-outer">
+            <li>
+              <label for="Food">Food</label>
+            </li>
+            <li>
+              <label for="meal">Meal Preference</label>
+              <select name="meal" id="meal">
+                <option value="meal">Neosca</option>
+                <option value="meal">NIascP</option>
+                <option value="meal">Varsacati</option>
+                <option value="meal">sacAcasacscsc</option>
+                <option value="meal">casBahahcaaha</option>
+                <option value="meal">saBcaUHAHAHA</option>
+              </select>
+            </li>
+            
+            <li>
+              <label for="check-number">Company/Institution</label>
+              <input type="text"  id="check-number" placeholder="check-number" required>
+            </li>
+            <li>
+              <label for="bank">Email</label>
+              <input type="text" id="bank" placeholder="Enter your bank here"required>
+            </li>
+            
+            <li>
+              <label for="payable">Payable</label>
+              <input type="text" id="payable" placeholder="payable" required>
+            </li>
+            
+            </ul>
+
+          </fieldset>
+      </div>
+      <div class="inside-footer">
+        <input id="foot1" type="submit" value="submit"> <input id="foot2" type="reset" value="reset">
+      </div>
+    </div>
+  </form>
+
+
+
 </body>
+
 </html>
