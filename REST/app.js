@@ -2,8 +2,8 @@ const express = require('express');
 const bookRouter= require('./routes/bookRoute');
 const app = express();
 
-app.use(express.json());
-app.use('/books',bookRouter)
+app.use(express.json());   // response is in json format
+app.use('/books',bookRouter);
 
 
 app.use((req,res,next)=>{

@@ -1,12 +1,27 @@
 let books = [
-    { id:1, title:'title1', ISBN:"1313131313", publishedDate:'pub1', author:'auth1'},
-    { id:2, title:'title2', ISBN:"324324434", publishedDate:'pub2', author:'auth2'},
-    { id:3, title:'title3', ISBN:"324234211", publishedDate:'pub3', author:'auth3'}
+    { bookId:1, title:'title1', ISBN:"1313131313", publishedDate:'pub1',
+     author: {
+         authorId:304,
+         firdtName:'John',
+         lastName:'Smith'
+    }},
+    { bookId:2, title:'title2', ISBN:"324324434", publishedDate:'pub2', 
+    author: {
+        authorId:308,
+        firdtName:'Edward',
+        lastName:'Jack'
+    }},
+    { bookId:3, title:'title3', ISBN:"324234211", publishedDate:'pub3',
+    author: {
+        authorId:309,
+        firdtName:'Sachin',
+        lastName:'Tandan'
+    }}
 ];
 let counter=3;
 module.exports = class Book {
     constructor( id, title, ISBN, publishedDate, author) {
-       this.id= id;
+       this.bookId= id;
        this.title=title;
        this.ISBN=ISBN;
        this.publishedDate=publishedDate;
@@ -14,14 +29,14 @@ module.exports = class Book {
     }
     save() {
         counter++;
-            this.id=counter;
+            this.bookId=counter;
          
         books.push(this);
         
         return this;
     }
     update() {
-        const index = books.findIndex(p => p.id == this.id);
+        const index = books.findIndex(p => p.bookId == this.bookId);
         if (index > -1) {
             books.splice(index, 1,this);
             return this;
@@ -33,7 +48,7 @@ module.exports = class Book {
         return books;
     }
     static findById(bookId){
-        const index = books.findIndex(t=>t.id==bookId);
+        const index = books.findIndex(t=>t.bookId==bookId);
         if (index>-1){
             return books[index];
         }
@@ -42,9 +57,9 @@ module.exports = class Book {
         }
     }
     static deleteById(bookId){
-        const index = books.findIndex(p=>p.id==bookId);
+        const index = books.findIndex(p=>p.bookId==bookId);
         if(index >-1){
-            books = books.filter(p=>p.id!=bookId);
+            books = books.filter(p=>p.bookId!=bookId);
         }
         else{
         throw new Error('cant find a product');    
