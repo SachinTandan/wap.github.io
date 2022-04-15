@@ -6,12 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<script>
+    let animal = {
+walk: function() {
+if (!this.isSleeping) {
+alert(`I walk`);
+}
+},
+sleep: function() {
+this.isSleeping = true;
+}
+}; 
+let rabbit = Object.create(animal);
+rabbit.name = "White Rabbit";
+rabbit.sleep();
 
+</script>
 </head>
 
 <body>
     <!-- <p id="demo"></p> -->
-    <script>
+    <!-- <script>
         // Removing an adding element at a particular location
         // in an array
         // Declaring and initializing arrays
@@ -27,20 +42,20 @@
         // at starting location 1
         // number_arr.splice(1, 3, 3, 4, 5);
 
-        // deletes two elements starting from index 1
-        // and add three elements.
-        // It contains ["amit", "xyz", "geek 1", "geek 2", "prateek"];
-        // string_arr.splice(1, 2, "xyz", "geek 1", "geek 2");
+        // // deletes two elements starting from index 1
+        // // and add three elements.
+        // // It contains ["amit", "xyz", "geek 1", "geek 2", "prateek"];
+        // // string_arr.splice(1, 2, "xyz", "geek 1", "geek 2");
 
-        // // Printing both the array after performing splice operation
-        // console.log("After splice op " + number_arr);
-        // console.log("After splice op " + string_arr);
-        const a = [
-            "Hydrogen",
-            "Helium",
-            "Lithium",
-            "Beryllium"
-        ];
+        // // // Printing both the array after performing splice operation
+        // // console.log("After splice op " + number_arr);
+        // // console.log("After splice op " + string_arr);
+        // const a = [
+        //     "Hydrogen",
+        //     "Helium",
+        //     "Lithium",
+        //     "Beryllium"
+        // ];
         // const a2 = a.filter(function(s) {
         // return s.length > 7 });
         // document.write(a2);
@@ -54,10 +69,75 @@
         //     return ac;
         // }, " ");
         // document.write(a1);
-        const a2 = a.filter(s=>s.length>7).reduce((t,item)=>t+" "+item," ");
-console.log(a2);
-    </script>
+        //         const a2 = a.filter(s=>s.length>7).reduce((t,item)=>t+" "+item," ");
+        // console.log(a2);
+        // function printNumber(from, to) {
+        //     let current = from;
+        //     let timmer = setInterval(function () {
+        //         console.log(current);
+        //         if (current == to) {
+        //             clearInterval(timmer);
+        //         }
+        //         current++;
+        //     }, 1000);
 
+        // }
+        // printNumber(1, 5);
+        // function askPassword(){
+
+
+        // }
+        //     let user={
+        //         name: 'john ',
+        //         loginOk(){
+        //             alert(this.name+'logged in');
+        //         },
+        //         loginFail(){
+        //             alert(this.name+'failed to log in ');
+        //         }
+        //     };
+        //    ( ()=>{
+        //         let password = prompt("Password?",'');
+        //         if(password=="rockstar") user.loginOk();
+        //         else user.loginFail();   
+        //     })();
+        //     let group = {
+        // title: "Our Group",
+        // students: ["John", "Pete", "Alice"],
+        // showList: function() {
+        // this.students.forEach((student)=> {
+        // console.log(this.title + ": " + student
+        // );
+        // });
+        // }
+        // };
+        // group.showList.bind(group)();
+        // let user = {
+        // firstName: "John",
+        // sayHi() {
+        // console.log(`Hello, ${this.firstName}!`);
+        // }
+        // };
+        // user.sayHi(); //works
+        // setTimeout(user.sayHi, 1000);
+        //     const me = {
+        //         first: 'John',
+        //         last: 'Smith',
+        //         getFullName: function () {
+        //             return this.first + ' ' + this.last+' ';
+        //         }
+        //     }
+        //     const log = function (height, weight) { // ‘this’ refers to the invoker
+        //         console.log(this.getFullName() + height + ' ' + weight);
+        //     }
+        //    log.call(me,20,20);
+        //    log.apply(me,[20,40]);
+        //    log.bind(me)(40,40);
+        
+
+
+    </script> -->
+>
 </body>
 
 </html>
