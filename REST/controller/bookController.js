@@ -1,8 +1,8 @@
 
 const Book = require('../model/book');
-getBooks = (req, res, next) => {
+getName = (req, res, next) => {
     let paramName = new URLSearchParams(req.query);
-    // console.log(paramName);
+    console.log(paramName);
     let isValid = false;
     for (let x of paramName.keys()) {
         if (x === 'firstName') {
@@ -18,6 +18,9 @@ getBooks = (req, res, next) => {
        throw new Error('NOT FOUND')
     }
 
+}
+getBooks= function(req,res,next){
+res.status(200).Book.fetchAll();
 }
 getBookById = (req, res, next) => {
     res.status(200).json(Book.findById(req.params.id));
@@ -41,6 +44,7 @@ deleteById = (req, res, next) => {
 }
 module.exports = {
     getBooks,
+    getName,
     getBookById,
     save,
     update,

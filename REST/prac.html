@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // window.onload= function(){
+        window.onload= function(){
 
-        //     let v1 = document.getElementById("num1");
-        //     let v2 = document.getElementById('num2');
-        //     let temp;
-        //     let btn = document.getElementById("btn");
-        //     btn.onclick = function(){
-        //         temp = v1.value;
-        //         v1.value=v2.value;
-        //         v2.value=temp;
+            let v1 = document.getElementById("num1");
+            let v2 = document.getElementById('num2');
+            let temp;
+            let btn = document.getElementById("btn");
+            btn.onclick = function(){
+                temp = v1.value;
+                v1.value=v2.value;
+                v2.value=temp;
 
-        //     }
+            }
 
-        // }
+        }
         console.log('start');
         async function f() {
             return 1;
@@ -37,6 +37,8 @@
     <input name="num1" id="num1" type="text" value="1 " />
     <input name="num2" id="num2" type="text" value="2" />
     <input id="btn" type="button" value="sub" placeholder="type here">
+   
+    
 </body>
 
 </html>
